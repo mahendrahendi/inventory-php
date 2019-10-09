@@ -1,5 +1,5 @@
 <?php
-// tes git2
+
 require 'config.php';
 require 'inc/session.php';
 require 'inc/items_core.php';
@@ -18,10 +18,6 @@ if($role != 1 && $role != 2)
 	header('Location: items.php');
 
 
-
-  
-
-
 if(isset($_POST['act'])) {
 	if($_POST['act'] == '1') {
 		//if(!isset($_POST['itemid']) || !isset($_POST['name']) || !isset($_POST['desc']) || !isset($_POST['cat']) || !isset($_POST['price']) || !isset($_POST['imageup']))
@@ -37,7 +33,7 @@ if(isset($_POST['act'])) {
 		$price = $_POST['price'];
 		$imageup = $_POST['imageup'];
 	
-		
+	
 		// Fix price
 		$price = (string)$price;
 		if(strpos($price, '.') === false) {
@@ -79,12 +75,6 @@ $idforimg = '999099001';
 //
 
 
-
- 
- 
-
- 
- 
  
  if(!isset($_GET['id']))
 	header('Location: items.php');
@@ -103,21 +93,8 @@ $item = $_items->get_item($itemid);
  
  if($_SERVER['REQUEST_METHOD']=='POST'){
 	 
-	//$ambil = $_POST['ambil'];
-	//$itemid2 = $_POST['itemid'];
-	//$itemName = $_POST['item-name'];
-	//$itemDesc = $_POST['item-descrp'];
 	
-	
-	//if($_items->update_item($itemid2, $itemDesc, $itemName, '1', '1', '0') == false)
-	//		die('wrong');
-	//	die('1');
-		
 
-
-
-
- 
  //checking the required parameters from the request 
  if(isset($_FILES['image']['name'])){
 	 
@@ -131,9 +108,6 @@ $item = $_items->get_item($itemid);
  
  //getting the file extension 
  $extension = $fileinfo['extension'];
- 
- 
- 
  
  
 
@@ -188,6 +162,7 @@ if($extension=="jpg" || $extension=="jpeg" )
 //png
     else if($extension=="png" || $extension=="PNG")
     {
+	
         $uploadedfile = $_FILES['image']['tmp_name'];
         $src = imagecreatefrompng($uploadedfile);
         list($width,$height)=getimagesize($uploadedfile);
@@ -327,9 +302,7 @@ if($extension=="jpg" || $extension=="jpeg" )
 							  <input type="hidden" name="item-imageup" value="<?php echo $item->img; ?>"/>
 						</div>	
 						<input type="submit" name="item-submit" class="ni btn blue" value="Save changes" />
-					
-
-						
+		
 					</form>
 				</div>
 			</div>

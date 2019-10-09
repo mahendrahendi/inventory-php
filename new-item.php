@@ -62,11 +62,11 @@ if(isset($_POST['act'])) {
 			<div class="center">
 				<div class="new-item form">
 					<form method="post" action="" name="new-item">
-						Item Name:<br />
+						Kode Barang:<br />
 						<div class="ni-cont">
 							<input type="text" name="item-name" class="ni" />
 						</div>
-						<span class="item-desc-left">Description (400 characters):</span><br />
+						<span class="item-desc-left">Nama Barang:</span><br />
 						<div class="ni-cont">
 							<textarea name="item-descrp" class="ni"></textarea>
 						</div>

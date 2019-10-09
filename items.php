@@ -25,6 +25,7 @@ if(isset($_POST['act'])) {
 	if($_POST['act'] == '2') {
 		if(!isset($_POST['id']) || $_POST['id'] == '')
 			die('wrong');
+			
 		
 		if($role == 3 || $role == 4)
 			die('wrong');

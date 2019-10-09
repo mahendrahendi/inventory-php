@@ -52,7 +52,7 @@ $('document').ready(function() {
 			var dif = 0;
 		}else
 			var dif = limit-count;
-		$('span.item-desc-left').html('Description ('+dif+' characters left):');
+		$('span.item-desc-left').html('Nama Barang ('+dif+' characters left):');
 	});
 	
 	$('input[name=item-qty]').keyup(function(evt) {
